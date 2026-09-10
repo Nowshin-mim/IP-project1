@@ -41,6 +41,48 @@ body {
     border: none;
     font-size: 28px;
 }
+/* =========================
+   DARK MODE
+========================= */
+
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+    background: #182017;
+    color: #f5f5ef;
+}
+
+.dark-mode .navbar {
+    background: #182017;
+}
+
+.dark-mode .logo {
+    color: #f5f5ef;
+}
+
+.dark-mode .icon-btn {
+    background: #283426;
+    color: #f5f5ef;
+}
+
+.dark-mode .about,
+.dark-mode .why,
+.dark-mode .team {
+    background: #182017;
+    color: #f5f5ef;
+}
+
+.dark-mode .feature-card,
+.dark-mode .team-card {
+    background: #253023;
+    color: #f5f5ef;
+}
+
+.dark-mode .footer {
+    background: #10160f;
+}
 
 .calculator {
     background: #edf5df;
@@ -1176,6 +1218,83 @@ body {
     background: #fffefa;
 
     box-shadow: 0 3px 10px rgba(100, 120, 70, 0.08);
+}
+
+/* CALCULATOR STYLE */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 45, 25, 0.55);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    padding: 20px;
+}
+
+.popup-overlay.show {
+    display: flex;
+}
+
+.calculator-popup {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    padding: 30px;
+    background: #fffefa;
+    border-radius: 32px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+}
+
+.calculator-display {
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #7f9060;
+    color: white;
+}
+
+#calcDisplay {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator-buttons button {
+    height: 65px;
+    border: none;
+    border-radius: 18px;
+    background: #eef4e8;
+    color: #4f5d3e;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calculator-buttons .operator {
+    background: #a7b88a;
+    color: white;
+}
+
+.calculator-buttons .equal {
+    background: #65764d;
+    color: white;
+}
+
+.calculator-buttons .zero {
+    grid-column: span 2;
 }
 
 

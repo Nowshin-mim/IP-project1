@@ -109,3 +109,19 @@ document.getElementById("calculatorPopup").addEventListener("click", function(ev
     }
 
 });
+
+// =========================
+// DARK MODE
+// =========================
+
+const sunButton = document.querySelector(".sun");
+
+sunButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        sunButton.textContent = "☾";
+    } else {
+        sunButton.textContent = "☼";
+    }
+});

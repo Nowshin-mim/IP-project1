@@ -4,155 +4,308 @@
 
 function openLogin() {
     document.getElementById("loginPopup").classList.add("show");
+
     document.body.style.overflow = "hidden";
 }
 
+
 function closeLogin() {
     document.getElementById("loginPopup").classList.remove("show");
+
     document.body.style.overflow = "";
 }
 
 
 // =========================
-// CALCULATOR POPUP
+// CALCULATOR
 // =========================
 
 let calculatorValue = "0";
 
+
 function openCalculator() {
-    document.getElementById("calculatorPopup").classList.add("show");
+
+    document
+        .getElementById("calculatorPopup")
+        .classList.add("show");
+
     document.body.style.overflow = "hidden";
 }
 
+
 function closeCalculator() {
-    document.getElementById("calculatorPopup").classList.remove("show");
+
+    document
+        .getElementById("calculatorPopup")
+        .classList.remove("show");
+
     document.body.style.overflow = "";
 }
 
+
 function updateCalculator() {
-    document.getElementById("calcDisplay").textContent = calculatorValue;
+
+    document.getElementById("calcDisplay").textContent =
+        calculatorValue;
 }
+
 
 function calculatorInput(value) {
 
+    // Plus / Minus
     if (value === "+/-") {
 
         if (calculatorValue !== "0") {
-            calculatorValue = calculatorValue.startsWith("-")
-                ? calculatorValue.slice(1)
-                : "-" + calculatorValue;
-        }
 
-    } 
-    
+            if (calculatorValue.startsWith("-")) {
+
+                calculatorValue =
+                    calculatorValue.slice(1);
+
+            } else {
+
+                calculatorValue =
+                    "-" + calculatorValue;
+            }
+        }
+    }
+
+
+    // Percentage
     else if (value === "%") {
 
-        calculatorValue = String(
-            parseFloat(calculatorValue) / 100
-        );
+        calculatorValue =
+            String(parseFloat(calculatorValue) / 100);
+    }
 
-    } 
-    
+
+    // Numbers / operators
     else {
 
         if (calculatorValue === "0") {
+
             calculatorValue = value;
-        } 
-        else {
+
+        } else {
+
             calculatorValue += value;
         }
     }
 
+
     updateCalculator();
 }
 
+
+// Clear calculator
+
 function clearCalculator() {
+
     calculatorValue = "0";
+
     updateCalculator();
 }
+
+
+// Calculate
 
 function calculateResult() {
 
     try {
 
-        calculatorValue = String(
-            Function("return " + calculatorValue)()
-        );
+        calculatorValue =
+            String(
+                Function(
+                    "return " + calculatorValue
+                )()
+            );
 
-    } 
-    
-    catch {
+    } catch {
 
         calculatorValue = "Error";
     }
+
 
     updateCalculator();
 }
 
 
 // =========================
-// CLOSE POPUP BY CLICKING OUTSIDE
+// CLOSE POPUPS BY CLICKING OUTSIDE
 // =========================
 
-document.getElementById("loginPopup").addEventListener("click", function(event) {
+const loginPopup =
+    document.getElementById("loginPopup");
 
-    if (event.target === this) {
-        closeLogin();
-    }
 
-});
+const calculatorPopup =
+    document.getElementById("calculatorPopup");
 
-document.getElementById("calculatorPopup").addEventListener("click", function(event) {
 
-    if (event.target === this) {
-        closeCalculator();
-    }
+if (loginPopup) {
 
-});
+    loginPopup.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === this) {
+
+                closeLogin();
+            }
+        }
+    );
+}
+
+
+if (calculatorPopup) {
+
+    calculatorPopup.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === this) {
+
+                closeCalculator();
+            }
+        }
+    );
+}
+
 
 // =========================
 // DARK MODE
 // =========================
 
-const sunButton = document.querySelector(".sun");
+const sunButton =
+    document.querySelector(".sun");
 
-sunButton.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
 
-    if (document.body.classList.contains("dark-mode")) {
-        sunButton.textContent = "☾";
-    } else {
-        sunButton.textContent = "☼";
-    }
-});
-// =========================================
-// SCROLL ANIMATION
-// =========================================
+if (sunButton) {
 
-const animatedSections = document.querySelectorAll(
-    ".how-it-works, .team"
-);
+    sunButton.addEventListener(
+        "click",
+        function () {
 
-const observer = new IntersectionObserver(
-    (entries) => {
+            document.body.classList.toggle(
+                "dark-mode"
+            );
 
-        entries.forEach((entry) => {
 
-            if (entry.isIntersecting) {
+            if (
+                document.body.classList.contains(
+                    "dark-mode"
+                )
+            ) {
 
-                entry.target.classList.add("animate");
+                sunButton.textContent = "☾";
 
+            } else {
+
+                sunButton.textContent = "☼";
             }
+        }
+    );
+}
 
-        });
 
-    },
-    {
-        threshold: 0.2
+// =========================
+// SCROLL ANIMATION
+// =========================
+
+const steps =
+    document.querySelectorAll(".step");
+
+
+const howSection =
+    document.querySelector(".how-it-works");
+
+
+const teamSection =
+    document.querySelector(".team");
+
+
+function checkAnimation() {
+
+    const screenHeight =
+        window.innerHeight;
+
+
+    // =========================
+    // HOW IT WORKS
+    // =========================
+
+    if (howSection) {
+
+        const howPosition =
+            howSection.getBoundingClientRect().top;
+
+
+        if (howPosition < screenHeight - 100) {
+
+            howSection.classList.add("animate");
+        }
     }
+
+
+    // Individual steps
+
+    steps.forEach(function (step) {
+
+        const stepPosition =
+            step.getBoundingClientRect().top;
+
+
+        if (stepPosition < screenHeight - 80) {
+
+            step.classList.add("show");
+        }
+    });
+
+
+    // =========================
+    // TEAM
+    // =========================
+
+    if (teamSection) {
+
+        const teamPosition =
+            teamSection.getBoundingClientRect().top;
+
+
+        if (teamPosition < screenHeight - 100) {
+
+            teamSection.classList.add("show");
+        }
+    }
+}
+
+
+// Scroll
+
+window.addEventListener(
+    "scroll",
+    checkAnimation
 );
 
 
-animatedSections.forEach((section) => {
-    observer.observe(section);
-});
+// Initial check
+
+checkAnimation();
+
+
+// =========================
+// ESC KEY TO CLOSE POPUP
+// =========================
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key === "Escape") {
+
+            closeLogin();
+
+            closeCalculator();
+        }
+    }
+);

@@ -902,3 +902,516 @@ body {
         margin-top: 45px;
     }
 }
+
+/* =========================================
+   POPUP OVERLAY
+========================================= */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(20, 27, 16, 0.45);
+
+    backdrop-filter: blur(8px);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+.popup-overlay.show {
+    display: flex;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.popup-close {
+    position: absolute;
+
+    top: 22px;
+    right: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 1px solid #dce7cf;
+
+    background: transparent;
+
+    color: #77865d;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CALCULATOR
+========================================= */
+
+.calculator-popup {
+    position: relative;
+
+    width: 430px;
+
+    background: #fffefa;
+
+    border-radius: 38px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+
+.calculator-display {
+    height: 150px;
+
+    background: #eaf5dc;
+
+    border: 2px solid #d9e8c8;
+
+    border-radius: 28px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+}
+
+
+#calcDisplay {
+    font-size: 48px;
+
+    color: #68784e;
+
+    font-weight: 500;
+
+    word-break: break-all;
+}
+
+
+/* Calculator buttons */
+
+.calculator-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+}
+
+
+.calculator-buttons button {
+    height: 75px;
+
+    border-radius: 22px;
+
+    border: 1px solid #dfe9d5;
+
+    background: #fffefa;
+
+    color: #454b40;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.calculator-buttons button:hover {
+    background: #edf6e3;
+}
+
+
+.calculator-buttons .operator {
+    background: #d4e8bd;
+
+    color: #64764b;
+
+    border: none;
+}
+
+
+.calculator-buttons .equal {
+    background: #7f9060;
+
+    color: white;
+
+    border: none;
+}
+
+
+.calculator-buttons .zero {
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   LOGIN POPUP
+========================================= */
+
+.login-popup {
+    position: relative;
+
+    width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #fffefa;
+
+    border-radius: 35px;
+
+    padding: 55px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+
+.login-logo {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 42px;
+
+    color: #7d8c60;
+
+    margin-bottom: 35px;
+}
+
+
+.login-popup h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+.login-popup h2 i {
+    color: #a4b28c;
+}
+
+
+.login-description {
+    margin-top: 20px;
+
+    color: #8b8f86;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 530px;
+}
+
+
+/* Tabs */
+
+.login-tabs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #e8f4dc;
+
+    padding: 5px;
+
+    border-radius: 25px;
+
+    margin-top: 35px;
+}
+
+
+.login-tabs button {
+    height: 65px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: #7b8867;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.login-tabs .active {
+    background: #fffefa;
+
+    box-shadow: 0 3px 10px rgba(100, 120, 70, 0.08);
+}
+
+
+/* Form */
+
+.login-form {
+    margin-top: 35px;
+}
+
+
+.login-form label {
+    display: block;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #555b51;
+
+    margin-bottom: 10px;
+
+    margin-top: 25px;
+}
+
+
+.login-form input {
+    width: 100%;
+
+    height: 70px;
+
+    border-radius: 20px;
+
+    border: 2px solid #dce9d1;
+
+    background: #fffefa;
+
+    padding: 0 22px;
+
+    font-size: 17px;
+
+    outline: none;
+}
+
+
+.login-form input:focus {
+    border-color: #9dae7d;
+
+    box-shadow: 0 0 0 4px #eef6e6;
+}
+
+
+.login-form input::placeholder {
+    color: #c2c7bd;
+}
+
+
+.forgot {
+    text-align: right;
+
+    margin-top: 15px;
+
+    color: #89966b;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.login-submit {
+    width: 100%;
+
+    height: 70px;
+
+    margin-top: 35px;
+
+    border: none;
+
+    border-radius: 22px;
+
+    background: #7f9060;
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* OR */
+
+.or {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+
+.or span {
+    height: 1px;
+
+    flex: 1;
+
+    background: #dce3d7;
+}
+
+
+.or p {
+    color: #aaaFA7;
+
+    font-size: 16px;
+}
+
+
+/* Google */
+
+.google-btn {
+    width: 100%;
+
+    height: 68px;
+
+    background: #fffefa;
+
+    border: 2px solid #dce9d1;
+
+    border-radius: 22px;
+
+    color: #3f443d;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.google-g {
+    font-size: 24px;
+
+    margin-right: 15px;
+
+    color: #4285f4;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .calculator-popup {
+        width: 100%;
+
+        max-width: 360px;
+
+        padding: 25px;
+
+        border-radius: 30px;
+    }
+
+
+    .calculator-display {
+        height: 115px;
+    }
+
+
+    #calcDisplay {
+        font-size: 36px;
+    }
+
+
+    .calculator-buttons {
+        gap: 9px;
+    }
+
+
+    .calculator-buttons button {
+        height: 62px;
+
+        border-radius: 17px;
+
+        font-size: 18px;
+    }
+
+
+    .login-popup {
+        width: 100%;
+
+        max-width: 390px;
+
+        padding: 35px 25px;
+
+        border-radius: 28px;
+    }
+
+
+    .login-logo {
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .login-popup h2 {
+        font-size: 43px;
+    }
+
+
+    .login-description {
+        font-size: 15px;
+    }
+
+
+    .login-tabs button {
+        font-size: 14px;
+
+        height: 55px;
+    }
+
+
+    .login-form input {
+        height: 60px;
+    }
+
+
+    .login-submit {
+        height: 62px;
+    }
+
+}

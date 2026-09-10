@@ -24,21 +24,172 @@
 
         <div class="nav-buttons">
 
-            <button class="icon-btn calculator">
-                ▣
-            </button>
+            <button class="icon-btn calculator" onclick="openCalculator()">
+    ▣
+</button>
 
-            <button class="icon-btn sun">
-                ☼
-            </button>
+<button class="icon-btn sun">
+    ☼
+</button>
 
-            <button class="get-started">
-                Get Started
-            </button>
+<button class="get-started" onclick="openLogin()">
+    Get Started
+</button>
 
         </div>
 
     </header>
+    <!-- ================= CALCULATOR POPUP ================= -->
+
+<div class="popup-overlay" id="calculatorPopup">
+
+    <div class="calculator-popup">
+
+        <button class="popup-close" onclick="closeCalculator()">
+            ×
+        </button>
+
+        <div class="calculator-display">
+            <span id="calcDisplay">0</span>
+        </div>
+
+
+        <div class="calculator-buttons">
+
+            <button onclick="clearCalculator()">AC</button>
+            <button onclick="calculatorInput('+/-')">+/-</button>
+            <button onclick="calculatorInput('%')">%</button>
+            <button class="operator" onclick="calculatorInput('/')">÷</button>
+
+            <button onclick="calculatorInput('7')">7</button>
+            <button onclick="calculatorInput('8')">8</button>
+            <button onclick="calculatorInput('9')">9</button>
+            <button class="operator" onclick="calculatorInput('*')">×</button>
+
+            <button onclick="calculatorInput('4')">4</button>
+            <button onclick="calculatorInput('5')">5</button>
+            <button onclick="calculatorInput('6')">6</button>
+            <button class="operator" onclick="calculatorInput('-')">−</button>
+
+            <button onclick="calculatorInput('1')">1</button>
+            <button onclick="calculatorInput('2')">2</button>
+            <button onclick="calculatorInput('3')">3</button>
+            <button class="operator" onclick="calculatorInput('+')">+</button>
+
+            <button class="zero" onclick="calculatorInput('0')">
+                0
+            </button>
+
+            <button onclick="calculatorInput('.')">
+                .
+            </button>
+
+            <button class="equal" onclick="calculateResult()">
+                =
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= LOGIN POPUP ================= -->
+
+<div class="popup-overlay" id="loginPopup">
+
+    <div class="login-popup">
+
+        <button class="popup-close" onclick="closeLogin()">
+            ×
+        </button>
+
+
+        <div class="login-logo">
+            Azeus
+        </div>
+
+        <h2>
+            Welcome <i>back.</i>
+        </h2>
+
+        <p class="login-description">
+            Sign in to your account or create one — it only
+            takes a moment.
+        </p>
+
+
+        <!-- Toggle -->
+
+        <div class="login-tabs">
+
+            <button class="active">
+                Sign In
+            </button>
+
+            <button>
+                Create Account
+            </button>
+
+        </div>
+
+
+        <!-- Form -->
+
+        <form class="login-form">
+
+            <label>
+                Email address
+            </label>
+
+            <input
+                type="email"
+                placeholder="you@example.com"
+                required
+            >
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                placeholder="••••••••"
+                required
+            >
+
+
+            <div class="forgot">
+                Forgot password?
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-submit"
+            >
+                Sign In to Azeus
+            </button>
+
+        </form>
+
+
+        <div class="or">
+            <span></span>
+            <p>or</p>
+            <span></span>
+        </div>
+
+
+        <button class="google-btn">
+            <span class="google-g">G</span>
+            Continue with Google
+        </button>
+
+    </div>
+
+</div>
 
 
     <!-- ================= HERO SECTION ================= -->

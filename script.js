@@ -125,3 +125,34 @@ sunButton.addEventListener("click", function () {
         sunButton.textContent = "☼";
     }
 });
+// =========================================
+// SCROLL ANIMATION
+// =========================================
+
+const animatedSections = document.querySelectorAll(
+    ".how-it-works, .team"
+);
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("animate");
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+
+animatedSections.forEach((section) => {
+    observer.observe(section);
+});

@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Inter", sans-serif;
     background: #ffffff;
     color: #11150d;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 
@@ -16,9 +21,11 @@ body {
 .navbar {
     height: 115px;
     padding: 0 5%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -37,52 +44,23 @@ body {
 .icon-btn {
     width: 60px;
     height: 60px;
+
     border-radius: 50%;
     border: none;
+
     font-size: 28px;
-}
-/* =========================
-   DARK MODE
-========================= */
 
-body {
-    transition: background 0.3s ease, color 0.3s ease;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.dark-mode {
-    background: #182017;
-    color: #f5f5ef;
+    cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
-.dark-mode .navbar {
-    background: #182017;
-}
 
-.dark-mode .logo {
-    color: #f5f5ef;
-}
-
-.dark-mode .icon-btn {
-    background: #283426;
-    color: #f5f5ef;
-}
-
-.dark-mode .about,
-.dark-mode .why,
-.dark-mode .team {
-    background: #182017;
-    color: #f5f5ef;
-}
-
-.dark-mode .feature-card,
-.dark-mode .team-card {
-    background: #253023;
-    color: #f5f5ef;
-}
-
-.dark-mode .footer {
-    background: #10160f;
-}
+/* Calculator icon */
 
 .calculator {
     background: #edf5df;
@@ -90,20 +68,48 @@ body {
     border: 1px solid #d3ddc4;
 }
 
+.calculator:hover {
+    background: #dce9ce;
+    transform: translateY(-2px);
+}
+
+
+/* Sun icon */
+
 .sun {
     background: #050704;
     color: white;
 }
 
+.sun:hover {
+    transform: rotate(20deg);
+}
+
+
+/* Get Started */
+
 .get-started {
     height: 60px;
+
     padding: 0 42px;
+
     border: none;
     border-radius: 40px;
+
     background: #89966b;
     color: white;
+
     font-size: 17px;
     font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.get-started:hover {
+    background: #737f58;
+    transform: translateY(-2px);
 }
 
 
@@ -117,27 +123,39 @@ body {
 .phone {
     width: 450px;
     height: 790px;
+
     background: #10150d;
+
     border-radius: 75px;
+
     padding: 45px 35px 35px;
+
     margin: auto;
+
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
 }
 
 .speaker {
     width: 135px;
     height: 15px;
+
     background: #252b20;
+
     border-radius: 20px;
+
     margin: auto;
     margin-bottom: 42px;
 }
 
 .balance-card {
     height: 270px;
+
     background: #858f66;
+
     border-radius: 42px;
+
     padding: 45px 20px;
+
     color: white;
 }
 
@@ -149,8 +167,10 @@ body {
 
 .balance-card h1 {
     font-family: "DM Serif Display", serif;
+
     font-size: 45px;
     font-weight: 400;
+
     margin-bottom: 25px;
 }
 
@@ -161,24 +181,34 @@ body {
 }
 
 
+/* Recent */
+
 .recent {
     margin-top: 25px;
+
     background: #181e13;
+
     border-radius: 35px;
+
     padding: 28px 20px;
 }
 
 .recent h3 {
     color: #737967;
+
     font-size: 15px;
+
     margin-bottom: 25px;
 }
 
 .transaction {
     display: flex;
     align-items: center;
+
     gap: 14px;
+
     margin-bottom: 24px;
+
     color: white;
 }
 
@@ -189,10 +219,13 @@ body {
 .profile {
     width: 52px;
     height: 52px;
+
     border-radius: 50%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-weight: 600;
 }
 
@@ -220,8 +253,11 @@ body {
 
 .transaction-info small {
     display: block;
+
     color: #70766a;
+
     margin-top: 5px;
+
     font-size: 12px;
 }
 
@@ -234,21 +270,33 @@ body {
 }
 
 
+/* Hero badge */
+
 .badge {
     display: inline-block;
+
     margin-top: 80px;
+
     padding: 13px 28px;
+
     border-radius: 30px;
+
     background: #edf6df;
+
     color: #788363;
+
     border: 1px solid #dce8ce;
 }
 
 .hero-title {
     margin-top: 50px;
+
     font-family: "DM Serif Display", serif;
+
     font-size: 78px;
+
     line-height: 0.95;
+
     font-weight: 400;
 }
 
@@ -262,21 +310,29 @@ body {
 
 .about {
     text-align: center;
+
     padding: 90px 7% 130px;
 }
 
 .about-text {
     max-width: 850px;
+
     margin: auto;
+
     font-size: 25px;
+
     line-height: 1.65;
+
     color: #73776e;
 }
 
 .cta-buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 28px;
+
     margin-top: 55px;
 }
 
@@ -284,30 +340,43 @@ body {
 .secondary-btn {
     width: 365px;
     height: 130px;
+
     border-radius: 70px;
+
     font-size: 25px;
     font-weight: 600;
+
+    cursor: pointer;
 }
 
 .primary-btn {
     background: #89966b;
+
     color: white;
+
     border: none;
 }
 
 .secondary-btn {
     background: white;
+
     color: #89966b;
+
     border: 2px solid #cfd7c1;
 }
 
 .trusted {
     margin-top: 50px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 20px;
+
     color: #b1b5ad;
+
     font-size: 18px;
 }
 
@@ -318,9 +387,13 @@ body {
 .people span {
     width: 42px;
     height: 42px;
+
     border-radius: 50%;
+
     border: 3px solid white;
+
     background: #c0d5a4;
+
     margin-left: -8px;
 }
 
@@ -342,16 +415,23 @@ body {
 .small-title,
 .team-small-title {
     color: #9da68a;
+
     letter-spacing: 5px;
+
     font-weight: 600;
+
     font-size: 17px;
 }
 
 .why h2 {
     font-family: "DM Serif Display", serif;
+
     font-size: 75px;
+
     font-weight: 400;
+
     line-height: 1;
+
     margin-top: 35px;
 }
 
@@ -361,9 +441,13 @@ body {
 
 .description {
     max-width: 950px;
+
     color: #8b8f88;
+
     font-size: 24px;
+
     line-height: 1.8;
+
     margin-top: 50px;
 }
 
@@ -372,43 +456,62 @@ body {
 
 .feature-card {
     min-height: 420px;
+
     border: 2px solid #e2ead8;
+
     border-radius: 50px;
+
     padding: 65px 70px;
+
     margin-top: 50px;
 }
 
 .feature-icon {
     width: 90px;
     height: 90px;
+
     background: #eff9e4;
+
     border-radius: 25px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     font-size: 42px;
+
     color: #7f8c63;
 }
 
 .feature-card h3 {
     margin-top: 60px;
+
     font-size: 34px;
 }
 
 .feature-card p {
     max-width: 800px;
+
     margin-top: 25px;
+
     color: #a0a39d;
+
     font-size: 24px;
+
     line-height: 1.7;
 }
+
 
 /* ================= HOW IT WORKS ================= */
 
 .how-it-works {
     background: #2b211c;
+
     color: #fffaf5;
+
     padding: 110px 5% 130px;
+
     overflow: hidden;
 }
 
@@ -417,21 +520,37 @@ body {
 
 .how-header {
     max-width: 1000px;
+
     margin-bottom: 80px;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
 .how-header p {
     color: #b9785f;
+
     font-size: 16px;
+
     font-weight: 600;
+
     letter-spacing: 5px;
+
     margin-bottom: 30px;
 }
 
 .how-header h2 {
     font-family: "DM Serif Display", serif;
+
     font-size: 78px;
+
     line-height: 1;
+
     font-weight: 400;
 }
 
@@ -444,12 +563,15 @@ body {
 
 .steps {
     max-width: 1100px;
+
     margin: auto;
 }
 
 .step {
     display: grid;
+
     grid-template-columns: 170px 1fr;
+
     gap: 35px;
 
     padding: 45px 0;
@@ -457,21 +579,42 @@ body {
     border-bottom: 1px solid rgba(255, 250, 245, 0.08);
 
     opacity: 0;
+
     transform: translateY(70px);
 
-    animation: stepReveal 0.9s ease forwards;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
-.step:nth-child(1) {
-    animation-delay: 0.1s;
+
+/* Active animation */
+
+.how-it-works.animate .how-header {
+    opacity: 1;
+
+    transform: translateY(0);
 }
 
-.step:nth-child(2) {
-    animation-delay: 0.25s;
+.step.show {
+    opacity: 1;
+
+    transform: translateY(0);
 }
 
-.step:nth-child(3) {
-    animation-delay: 0.4s;
+
+/* Different delay */
+
+.step:nth-child(1).show {
+    transition-delay: 0.1s;
+}
+
+.step:nth-child(2).show {
+    transition-delay: 0.3s;
+}
+
+.step:nth-child(3).show {
+    transition-delay: 0.5s;
 }
 
 
@@ -479,7 +622,9 @@ body {
 
 .step-number {
     font-family: "DM Serif Display", serif;
+
     font-size: 55px;
+
     color: #a88970;
 
     transition:
@@ -492,22 +637,28 @@ body {
 
 .step-content h3 {
     font-size: 25px;
+
     margin-bottom: 18px;
+
     font-weight: 600;
 }
 
 .step-content p {
     max-width: 750px;
+
     color: #8d8179;
+
     font-size: 19px;
+
     line-height: 1.8;
 }
 
 
-/* Hover movement */
+/* Hover */
 
 .step:hover .step-number {
     transform: translateY(-10px);
+
     color: #d19a80;
 }
 
@@ -520,82 +671,34 @@ body {
 }
 
 
-/* Scroll reveal */
-
-@keyframes stepReveal {
-
-    from {
-        opacity: 0;
-        transform: translateY(70px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 600px) {
-
-    .how-it-works {
-        padding: 80px 20px 90px;
-    }
-
-    .how-header {
-        margin-bottom: 45px;
-    }
-
-    .how-header p {
-        font-size: 11px;
-        letter-spacing: 4px;
-        margin-bottom: 25px;
-    }
-
-    .how-header h2 {
-        font-size: 49px;
-        line-height: 1.05;
-    }
-
-    .step {
-        grid-template-columns: 65px 1fr;
-        gap: 15px;
-        padding: 35px 0;
-    }
-
-    .step-number {
-        font-size: 34px;
-    }
-
-    .step-content h3 {
-        font-size: 17px;
-        margin-bottom: 12px;
-    }
-
-    .step-content p {
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-}
-
-
-
 /* ================= TEAM ================= */
 
 .team {
     background: #e9f8d8;
+
     padding: 75px 4% 130px;
+}
+
+.team-small-title,
+.team > h2 {
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
 
 .team h2 {
     font-family: "DM Serif Display", serif;
+
     font-size: 75px;
+
     line-height: 1;
+
     font-weight: 400;
+
     margin-top: 35px;
 }
 
@@ -604,34 +707,113 @@ body {
 }
 
 
+/* Team grid */
+
 .team-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 50px;
+
     margin-top: 80px;
 }
 
 .team-card {
     min-height: 360px;
+
     background: white;
+
     border-radius: 40px;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(70px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* Team animation */
+
+.team.show .team-small-title,
+.team.show > h2 {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.team.show .team-card {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* Card delays */
+
+.team.show .team-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.team.show .team-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.team.show .team-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.team.show .team-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.team.show .team-card:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+
+/* Team hover */
+
+.team-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+
+    box-shadow: 0 20px 45px rgba(50, 70, 35, 0.12);
+}
+
+
+/* Initial */
 
 .initial {
     width: 105px;
     height: 105px;
+
     border-radius: 50%;
+
     background: #8a976d;
+
     color: white;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     font-family: "DM Serif Display", serif;
+
     font-size: 28px;
 }
 
@@ -641,20 +823,27 @@ body {
 
 .team-card h3 {
     font-family: "DM Serif Display", serif;
+
     font-size: 28px;
+
     font-weight: 400;
+
     margin-top: 38px;
 }
 
 .team-card p {
     margin-top: 15px;
+
     color: #c2c5bd;
+
     font-size: 18px;
 }
 
 .last-card {
     grid-column: 1 / 3;
+
     width: 48%;
+
     margin: auto;
 }
 
@@ -663,294 +852,54 @@ body {
 
 .footer {
     background: #10150d;
+
     color: white;
+
     text-align: center;
+
     padding: 80px 5% 90px;
 }
 
 .footer-logo {
     font-family: "DM Serif Display", serif;
+
     font-size: 75px;
+
     color: #d9e3ca;
 }
 
 .footer-links {
     display: flex;
+
     justify-content: center;
+
     gap: 110px;
+
     margin-top: 70px;
 }
 
 .footer-links a {
     color: #73786f;
+
     text-decoration: none;
+
     font-size: 25px;
 }
 
 .footer > p {
     color: #676d62;
+
     margin-top: 65px;
+
     font-size: 18px;
 }
 
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 600px) {
-
-    .navbar {
-        height: 90px;
-        padding: 0 20px;
-    }
-
-    .logo {
-        font-size: 36px;
-    }
-
-    .nav-buttons {
-        gap: 7px;
-    }
-
-    .icon-btn {
-        width: 42px;
-        height: 42px;
-        font-size: 19px;
-    }
-
-    .get-started {
-        height: 42px;
-        padding: 0 17px;
-        font-size: 12px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        padding-top: 60px;
-    }
-
-    .phone {
-        width: 330px;
-        height: 590px;
-        padding: 28px 24px;
-        border-radius: 55px;
-    }
-
-    .speaker {
-        width: 90px;
-        height: 10px;
-        margin-bottom: 28px;
-    }
-
-    .balance-card {
-        height: 205px;
-        padding: 28px 10px;
-        border-radius: 30px;
-    }
-
-    .balance-card p {
-        font-size: 13px;
-        margin-bottom: 15px;
-    }
-
-    .balance-card h1 {
-        font-size: 30px;
-        margin-bottom: 15px;
-    }
-
-    .balance-card h4 {
-        font-size: 11px;
-    }
-
-    .recent {
-        margin-top: 15px;
-        padding: 18px 12px;
-        border-radius: 25px;
-    }
-
-    .recent h3 {
-        font-size: 12px;
-        margin-bottom: 18px;
-    }
-
-    .profile {
-        width: 38px;
-        height: 38px;
-        font-size: 14px;
-    }
-
-    .transaction {
-        gap: 8px;
-        margin-bottom: 15px;
-    }
-
-    .transaction-info strong {
-        font-size: 11px;
-    }
-
-    .transaction-info small {
-        font-size: 8px;
-    }
-
-    .transaction > span {
-        font-size: 11px;
-    }
-
-    .badge {
-        margin-top: 50px;
-        font-size: 11px;
-    }
-
-    .hero-title {
-        font-size: 49px;
-    }
-
-
-    /* About */
-
-    .about {
-        padding: 70px 20px 100px;
-    }
-
-    .about-text {
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-        height: 105px;
-        font-size: 20px;
-    }
-
-    .trusted {
-        font-size: 13px;
-    }
-
-
-    /* Why */
-
-    .why {
-        padding: 80px 20px;
-    }
-
-    .small-title,
-    .team-small-title {
-        font-size: 13px;
-        letter-spacing: 4px;
-    }
-
-    .why h2,
-    .team h2 {
-        font-size: 48px;
-    }
-
-    .description {
-        font-size: 17px;
-        line-height: 1.8;
-    }
-
-    .feature-card {
-        min-height: 330px;
-        padding: 40px 30px;
-        border-radius: 35px;
-    }
-
-    .feature-icon {
-        width: 65px;
-        height: 65px;
-        font-size: 30px;
-    }
-
-    .feature-card h3 {
-        font-size: 24px;
-        margin-top: 40px;
-    }
-
-    .feature-card p {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-
-    /* Team */
-
-    .team {
-        padding: 60px 20px 90px;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        margin-top: 50px;
-    }
-
-    .team-card {
-        min-height: 280px;
-        border-radius: 30px;
-    }
-
-    .initial {
-        width: 80px;
-        height: 80px;
-        font-size: 23px;
-    }
-
-    .team-card h3 {
-        font-size: 22px;
-        margin-top: 25px;
-    }
-
-    .team-card p {
-        font-size: 14px;
-    }
-
-    .last-card {
-        grid-column: auto;
-        width: 100%;
-    }
-
-
-    /* Footer */
-
-    .footer {
-        padding: 60px 20px;
-    }
-
-    .footer-logo {
-        font-size: 55px;
-    }
-
-    .footer-links {
-        gap: 25px;
-        flex-wrap: wrap;
-        margin-top: 45px;
-    }
-
-    .footer-links a {
-        font-size: 16px;
-    }
-
-    .footer > p {
-        font-size: 13px;
-        margin-top: 45px;
-    }
-}
-
-/* =========================================
-   POPUP OVERLAY
-========================================= */
+/* ================= POPUP OVERLAY ================= */
 
 .popup-overlay {
     position: fixed;
+
     inset: 0;
 
     background: rgba(20, 27, 16, 0.45);
@@ -972,9 +921,7 @@ body {
 }
 
 
-/* =========================================
-   CLOSE BUTTON
-========================================= */
+/* ================= CLOSE BUTTON ================= */
 
 .popup-close {
     position: absolute;
@@ -998,12 +945,16 @@ body {
     line-height: 1;
 
     cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.popup-close:hover {
+    background: #edf5df;
 }
 
 
-/* =========================================
-   CALCULATOR
-========================================= */
+/* ================= CALCULATOR ================= */
 
 .calculator-popup {
     position: relative;
@@ -1016,10 +967,10 @@ body {
 
     padding: 35px;
 
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.25);
-}
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
 
+    animation: popupIn 0.3s ease;
+}
 
 .calculator-display {
     height: 150px;
@@ -1043,7 +994,6 @@ body {
     overflow: hidden;
 }
 
-
 #calcDisplay {
     font-size: 48px;
 
@@ -1060,12 +1010,10 @@ body {
 .calculator-buttons {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 14px;
 }
-
 
 .calculator-buttons button {
     height: 75px;
@@ -1085,11 +1033,11 @@ body {
     transition: 0.2s;
 }
 
-
 .calculator-buttons button:hover {
     background: #edf6e3;
-}
 
+    transform: translateY(-2px);
+}
 
 .calculator-buttons .operator {
     background: #d4e8bd;
@@ -1099,7 +1047,6 @@ body {
     border: none;
 }
 
-
 .calculator-buttons .equal {
     background: #7f9060;
 
@@ -1108,15 +1055,12 @@ body {
     border: none;
 }
 
-
 .calculator-buttons .zero {
     grid-column: span 2;
 }
 
 
-/* =========================================
-   LOGIN POPUP
-========================================= */
+/* ================= LOGIN POPUP ================= */
 
 .login-popup {
     position: relative;
@@ -1133,10 +1077,10 @@ body {
 
     padding: 55px;
 
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.25);
-}
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
 
+    animation: popupIn 0.3s ease;
+}
 
 .login-logo {
     font-family: "DM Serif Display", serif;
@@ -1148,7 +1092,6 @@ body {
     margin-bottom: 35px;
 }
 
-
 .login-popup h2 {
     font-family: "DM Serif Display", serif;
 
@@ -1159,11 +1102,9 @@ body {
     line-height: 1;
 }
 
-
 .login-popup h2 i {
     color: #a4b28c;
 }
-
 
 .login-description {
     margin-top: 20px;
@@ -1178,7 +1119,7 @@ body {
 }
 
 
-/* Tabs */
+/* Login tabs */
 
 .login-tabs {
     display: grid;
@@ -1193,7 +1134,6 @@ body {
 
     margin-top: 35px;
 }
-
 
 .login-tabs button {
     height: 65px;
@@ -1213,97 +1153,18 @@ body {
     cursor: pointer;
 }
 
-
 .login-tabs .active {
     background: #fffefa;
 
     box-shadow: 0 3px 10px rgba(100, 120, 70, 0.08);
 }
 
-/* CALCULATOR STYLE */
 
-.popup-overlay {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(30, 45, 25, 0.55);
-    backdrop-filter: blur(8px);
-    z-index: 9999;
-    padding: 20px;
-}
-
-.popup-overlay.show {
-    display: flex;
-}
-
-.calculator-popup {
-    position: relative;
-    width: 100%;
-    max-width: 390px;
-    padding: 30px;
-    background: #fffefa;
-    border-radius: 32px;
-    box-shadow: 0 25px 70px rgba(0,0,0,0.2);
-}
-
-.calculator-display {
-    height: 120px;
-    margin-bottom: 20px;
-    padding: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    overflow: hidden;
-    border-radius: 22px;
-    background: #7f9060;
-    color: white;
-}
-
-#calcDisplay {
-    font-size: 42px;
-    font-weight: 600;
-}
-
-.calculator-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-.calculator-buttons button {
-    height: 65px;
-    border: none;
-    border-radius: 18px;
-    background: #eef4e8;
-    color: #4f5d3e;
-    font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.calculator-buttons .operator {
-    background: #a7b88a;
-    color: white;
-}
-
-.calculator-buttons .equal {
-    background: #65764d;
-    color: white;
-}
-
-.calculator-buttons .zero {
-    grid-column: span 2;
-}
-
-
-/* Form */
+/* ================= LOGIN FORM ================= */
 
 .login-form {
     margin-top: 35px;
 }
-
 
 .login-form label {
     display: block;
@@ -1318,7 +1179,6 @@ body {
 
     margin-top: 25px;
 }
-
 
 .login-form input {
     width: 100%;
@@ -1338,18 +1198,15 @@ body {
     outline: none;
 }
 
-
 .login-form input:focus {
     border-color: #9dae7d;
 
     box-shadow: 0 0 0 4px #eef6e6;
 }
 
-
 .login-form input::placeholder {
     color: #c2c7bd;
 }
-
 
 .forgot {
     text-align: right;
@@ -1362,7 +1219,6 @@ body {
 
     cursor: pointer;
 }
-
 
 .login-submit {
     width: 100%;
@@ -1386,8 +1242,12 @@ body {
     cursor: pointer;
 }
 
+.login-submit:hover {
+    background: #68784e;
+}
 
-/* OR */
+
+/* ================= OR ================= */
 
 .or {
     display: flex;
@@ -1399,7 +1259,6 @@ body {
     margin: 30px 0;
 }
 
-
 .or span {
     height: 1px;
 
@@ -1408,7 +1267,6 @@ body {
     background: #dce3d7;
 }
 
-
 .or p {
     color: #aaaFA7;
 
@@ -1416,7 +1274,7 @@ body {
 }
 
 
-/* Google */
+/* ================= GOOGLE ================= */
 
 .google-btn {
     width: 100%;
@@ -1438,7 +1296,6 @@ body {
     cursor: pointer;
 }
 
-
 .google-g {
     font-size: 24px;
 
@@ -1448,11 +1305,451 @@ body {
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* Popup animation */
+
+@keyframes popupIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ================= DARK MODE ================= */
+
+.dark-mode {
+    background: #182017;
+
+    color: #f5f5ef;
+}
+
+.dark-mode .navbar {
+    background: #182017;
+
+    border-color: #30382c;
+}
+
+.dark-mode .logo {
+    color: #f5f5ef;
+}
+
+.dark-mode .sun {
+    background: #283426;
+
+    color: #f5f5ef;
+}
+
+.dark-mode .calculator {
+    background: #283426;
+
+    color: #dce8d2;
+
+    border-color: #3b4836;
+}
+
+.dark-mode .about,
+.dark-mode .why {
+    background: #182017;
+
+    color: #f5f5ef;
+}
+
+.dark-mode .about-text,
+.dark-mode .description {
+    color: #a9b0a4;
+}
+
+.dark-mode .secondary-btn {
+    background: #182017;
+
+    border-color: #4a5843;
+
+    color: #c8d6b7;
+}
+
+.dark-mode .feature-card {
+    background: #202a1e;
+
+    border-color: #374332;
+}
+
+.dark-mode .feature-card h3 {
+    color: #f5f5ef;
+}
+
+.dark-mode .feature-card p {
+    color: #9da69a;
+}
+
+.dark-mode .team {
+    background: #20291c;
+}
+
+.dark-mode .team-card {
+    background: #293326;
+}
+
+.dark-mode .team-card h3 {
+    color: #f5f5ef;
+}
+
+.dark-mode .footer {
+    background: #10160f;
+}
+
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
+
+    /* Navbar */
+
+    .navbar {
+        height: 90px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .nav-buttons {
+        gap: 7px;
+    }
+
+    .icon-btn {
+        width: 42px;
+        height: 42px;
+
+        font-size: 19px;
+    }
+
+    .get-started {
+        height: 42px;
+
+        padding: 0 17px;
+
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .phone {
+        width: 330px;
+
+        height: 590px;
+
+        padding: 28px 24px;
+
+        border-radius: 55px;
+    }
+
+    .speaker {
+        width: 90px;
+
+        height: 10px;
+
+        margin-bottom: 28px;
+    }
+
+    .balance-card {
+        height: 205px;
+
+        padding: 28px 10px;
+
+        border-radius: 30px;
+    }
+
+    .balance-card p {
+        font-size: 13px;
+
+        margin-bottom: 15px;
+    }
+
+    .balance-card h1 {
+        font-size: 30px;
+
+        margin-bottom: 15px;
+    }
+
+    .balance-card h4 {
+        font-size: 11px;
+    }
+
+    .recent {
+        margin-top: 15px;
+
+        padding: 18px 12px;
+
+        border-radius: 25px;
+    }
+
+    .recent h3 {
+        font-size: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .profile {
+        width: 38px;
+        height: 38px;
+
+        font-size: 14px;
+    }
+
+    .transaction {
+        gap: 8px;
+
+        margin-bottom: 15px;
+    }
+
+    .transaction-info strong {
+        font-size: 11px;
+    }
+
+    .transaction-info small {
+        font-size: 8px;
+    }
+
+    .transaction > span {
+        font-size: 11px;
+    }
+
+    .badge {
+        margin-top: 50px;
+
+        font-size: 11px;
+    }
+
+    .hero-title {
+        font-size: 49px;
+    }
+
+
+    /* About */
+
+    .about {
+        padding: 70px 20px 100px;
+    }
+
+    .about-text {
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: center;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+
+        height: 105px;
+
+        font-size: 20px;
+    }
+
+    .trusted {
+        font-size: 13px;
+    }
+
+
+    /* Why */
+
+    .why {
+        padding: 80px 20px;
+    }
+
+    .small-title,
+    .team-small-title {
+        font-size: 13px;
+
+        letter-spacing: 4px;
+    }
+
+    .why h2,
+    .team h2 {
+        font-size: 48px;
+    }
+
+    .description {
+        font-size: 17px;
+
+        line-height: 1.8;
+    }
+
+    .feature-card {
+        min-height: 330px;
+
+        padding: 40px 30px;
+
+        border-radius: 35px;
+    }
+
+    .feature-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 30px;
+    }
+
+    .feature-card h3 {
+        font-size: 24px;
+
+        margin-top: 40px;
+    }
+
+    .feature-card p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    /* How it works */
+
+    .how-it-works {
+        padding: 80px 20px 90px;
+    }
+
+    .how-header {
+        margin-bottom: 45px;
+    }
+
+    .how-header p {
+        font-size: 11px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 25px;
+    }
+
+    .how-header h2 {
+        font-size: 49px;
+
+        line-height: 1.05;
+    }
+
+    .step {
+        grid-template-columns: 65px 1fr;
+
+        gap: 15px;
+
+        padding: 35px 0;
+    }
+
+    .step-number {
+        font-size: 34px;
+    }
+
+    .step-content h3 {
+        font-size: 17px;
+
+        margin-bottom: 12px;
+    }
+
+    .step-content p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Team */
+
+    .team {
+        padding: 60px 20px 90px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 50px;
+    }
+
+    .team-card {
+        min-height: 280px;
+
+        border-radius: 30px;
+    }
+
+    .initial {
+        width: 80px;
+        height: 80px;
+
+        font-size: 23px;
+    }
+
+    .team-card h3 {
+        font-size: 22px;
+
+        margin-top: 25px;
+    }
+
+    .team-card p {
+        font-size: 14px;
+    }
+
+    .last-card {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 60px 20px;
+    }
+
+    .footer-logo {
+        font-size: 55px;
+    }
+
+    .footer-links {
+        gap: 25px;
+
+        flex-wrap: wrap;
+
+        margin-top: 45px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
+    }
+
+    .footer > p {
+        font-size: 13px;
+
+        margin-top: 45px;
+    }
+
+
+    /* Calculator popup */
 
     .calculator-popup {
         width: 100%;
@@ -1464,21 +1761,17 @@ body {
         border-radius: 30px;
     }
 
-
     .calculator-display {
         height: 115px;
     }
-
 
     #calcDisplay {
         font-size: 36px;
     }
 
-
     .calculator-buttons {
         gap: 9px;
     }
-
 
     .calculator-buttons button {
         height: 62px;
@@ -1488,6 +1781,8 @@ body {
         font-size: 18px;
     }
 
+
+    /* Login popup */
 
     .login-popup {
         width: 100%;
@@ -1499,23 +1794,19 @@ body {
         border-radius: 28px;
     }
 
-
     .login-logo {
         font-size: 34px;
 
         margin-bottom: 25px;
     }
 
-
     .login-popup h2 {
         font-size: 43px;
     }
 
-
     .login-description {
         font-size: 15px;
     }
-
 
     .login-tabs button {
         font-size: 14px;
@@ -1523,11 +1814,9 @@ body {
         height: 55px;
     }
 
-
     .login-form input {
         height: 60px;
     }
-
 
     .login-submit {
         height: 62px;

@@ -1540,6 +1540,48 @@ body {
         font-size: 49px;
     }
 
+    /* =========================
+   MOBILE LIGHT MODE FIX
+========================= */
+
+@media (max-width: 600px) {
+
+    body:not(.dark-mode) {
+        background: #ffffff;
+        color: #11150d;
+    }
+
+    body:not(.dark-mode) .navbar {
+        background: #ffffff;
+        color: #11150d;
+    }
+
+    body:not(.dark-mode) .about,
+    body:not(.dark-mode) .why {
+        background: #ffffff;
+        color: #11150d;
+    }
+
+    body:not(.dark-mode) .team {
+        background: #e9f8d8;
+        color: #11150d;
+    }
+
+    body:not(.dark-mode) .footer {
+        background: #10150d;
+        color: white;
+    }
+
+    body:not(.dark-mode) .logo {
+        color: #747d5d;
+    }
+
+    body:not(.dark-mode) .icon-btn.sun {
+        background: #050704;
+        color: white;
+    }
+
+}
 
     /* About */
 

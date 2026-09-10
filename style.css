@@ -361,6 +361,186 @@ body {
     line-height: 1.7;
 }
 
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works {
+    background: #2b211c;
+    color: #fffaf5;
+    padding: 110px 5% 130px;
+    overflow: hidden;
+}
+
+
+/* Heading */
+
+.how-header {
+    max-width: 1000px;
+    margin-bottom: 80px;
+}
+
+.how-header p {
+    color: #b9785f;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.how-header h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 78px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.how-header h2 i {
+    color: #b9785f;
+}
+
+
+/* Steps */
+
+.steps {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 35px;
+
+    padding: 45px 0;
+
+    border-bottom: 1px solid rgba(255, 250, 245, 0.08);
+
+    opacity: 0;
+    transform: translateY(70px);
+
+    animation: stepReveal 0.9s ease forwards;
+}
+
+.step:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.step:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.step:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+/* Number */
+
+.step-number {
+    font-family: "DM Serif Display", serif;
+    font-size: 55px;
+    color: #a88970;
+
+    transition:
+        transform 0.5s ease,
+        color 0.5s ease;
+}
+
+
+/* Content */
+
+.step-content h3 {
+    font-size: 25px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.step-content p {
+    max-width: 750px;
+    color: #8d8179;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* Hover movement */
+
+.step:hover .step-number {
+    transform: translateY(-10px);
+    color: #d19a80;
+}
+
+.step:hover .step-content {
+    transform: translateX(10px);
+}
+
+.step-content {
+    transition: transform 0.5s ease;
+}
+
+
+/* Scroll reveal */
+
+@keyframes stepReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .how-it-works {
+        padding: 80px 20px 90px;
+    }
+
+    .how-header {
+        margin-bottom: 45px;
+    }
+
+    .how-header p {
+        font-size: 11px;
+        letter-spacing: 4px;
+        margin-bottom: 25px;
+    }
+
+    .how-header h2 {
+        font-size: 49px;
+        line-height: 1.05;
+    }
+
+    .step {
+        grid-template-columns: 65px 1fr;
+        gap: 15px;
+        padding: 35px 0;
+    }
+
+    .step-number {
+        font-size: 34px;
+    }
+
+    .step-content h3 {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .step-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+}
+
+
 
 /* ================= TEAM ================= */
 
